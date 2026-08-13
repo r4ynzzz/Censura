@@ -57,7 +57,7 @@ export default function NavBar() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Features</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="w-96">
                   <li title="Introduction">Use me to learn</li>
@@ -65,7 +65,7 @@ export default function NavBar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem className="hidden md:flex">
-              <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Company</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-96 gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   {components.map((component) => (
@@ -85,6 +85,9 @@ export default function NavBar() {
               <NavigationMenuContent>
                 <NavigationMenuLink>link</NavigationMenuLink>
               </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink>Pricing</NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
