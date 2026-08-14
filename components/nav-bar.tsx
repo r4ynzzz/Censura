@@ -14,39 +14,34 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    title: "About Us",
+    href: "/about-us",
+    description: "Information on the company and it's vision",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    title: "Blog",
+    href: "/blog",
+    description: "Get out latest posts on changes.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    title: "Management Team",
+    href: "/management-team",
+    description: "Meet the team behind the product.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Contact Us",
+    href: "/contact-us",
+    description: "Contact details for any situation.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+    title: "Support",
+    href: "/support",
+    description: "Customer support for those in need.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    title: "Reviews",
+    href: "/reviews",
+    description: "A look at what customers have to say about our product.",
   },
 ];
 
@@ -70,15 +65,21 @@ export default function NavBar() {
             <NavigationMenuItem className="hidden md:flex">
               <NavigationMenuTrigger>Company</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-96 gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <ul className="grid w-96 gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   {components.map((component) => (
-                    <Link
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </Link>
+                    <li key={component.title}>
+                      <Link
+                        href={component.href}
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">
+                          {component.title}
+                        </div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          {component.description}
+                        </p>
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               </NavigationMenuContent>
