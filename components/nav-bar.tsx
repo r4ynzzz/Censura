@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import {
@@ -50,6 +51,8 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export default function NavBar() {
+  const router = useRouter();
+
   return (
     <nav className="bg-white flex items-center justify-between py-4 px-6 lg:px-14 text-black drop-shadow-md sticky top-0 z-1">
       <h1 className="font-bold">Censura</h1>
@@ -93,10 +96,14 @@ export default function NavBar() {
         </NavigationMenu>
       </span>
       <span className="">
-        <Button variant="outline" className="mx-2">
+        <Button
+          variant="outline"
+          className="mx-2"
+          onClick={() => router.push("/sign-in")}
+        >
           Sign in
         </Button>
-        <Button>Sign Up</Button>
+        <Button onClick={() => router.push("/sign-up")}>Sign Up</Button>
       </span>
     </nav>
   );
