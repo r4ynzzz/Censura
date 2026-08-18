@@ -102,9 +102,9 @@ export default function NavBar() {
           className="mx-2"
           onClick={() => router.push("/sign-in")}
         >
-          Sign in
+          Login
         </Button>
-        <Button onClick={() => router.push("/sign-up")}>Sign Up</Button>
+        <Button onClick={() => router.push("/sign-up")}>Apply Now</Button>
       </span>
     </nav>
   );
