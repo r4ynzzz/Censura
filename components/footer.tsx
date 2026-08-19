@@ -3,9 +3,11 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full bg-black text-white">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="max-h-6xl h-96 mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="font-bold text-xl">Censura</div>
-        <div className="flex gap-6 text-sm">
+
+        <div className="flex flex-col gap-2 text-sm">
+          <h1 className="font-bold text-xl">Company</h1>
           <Link href="" className="hover:text-gray-600 transition-colors">
             About
           </Link>
@@ -15,10 +17,37 @@ export default function Footer() {
           <Link href="" className="hover:text-gray-600 transition-colors">
             Support
           </Link>
-          <p className="text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} Censura. All rights reserved.
-          </p>
         </div>
+
+        <div className="flex flex-col gap-2 text-sm">
+          <h1 className="font-bold text-xl">Features</h1>
+          <Link href="" className="hover:text-gray-600 transition-colors">
+            About
+          </Link>
+          <Link href="" className="hover:text-gray-600 transition-colors">
+            Contact
+          </Link>
+          <Link href="" className="hover:text-gray-600 transition-colors">
+            Support
+          </Link>
+        </div>
+
+        <div className="flex flex-col gap-2 text-sm">
+          <h1 className="font-bold text-xl">Company</h1>
+          <Link href="" className="hover:text-gray-600 transition-colors">
+            About
+          </Link>
+          <Link href="" className="hover:text-gray-600 transition-colors">
+            Contact
+          </Link>
+          <Link href="" className="hover:text-gray-600 transition-colors">
+            Support
+          </Link>
+        </div>
+
+        <p className="text-xs text-gray-500">
+          &copy; {new Date().getFullYear()} Censura. All rights reserved.
+        </p>
       </div>
     </footer>
   );
