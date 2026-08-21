@@ -45,6 +45,24 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
+const features: { title: string; href: string; description: string }[] = [
+  {
+    title: "Custom Forms",
+    href: "/forms-info",
+    description: "Information on the company and it's vision",
+  },
+  {
+    title: "Analytics",
+    href: "/analytics-info",
+    description: "Get out latest posts on changes.",
+  },
+  {
+    title: "MF Doom",
+    href: "/management-team",
+    description: "Meet the team behind the product.",
+  },
+];
+
 export default function NavBar() {
   const router = useRouter();
 
@@ -57,8 +75,22 @@ export default function NavBar() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Features</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="w-96">
-                  <li title="Introduction">Use me to learn</li>
+                <ul className="grid w-96 gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  {features.map((feature) => (
+                    <li key={feature.title}>
+                      <Link
+                        href={feature.href}
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">
+                          {feature.title}
+                        </div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          {feature.description}
+                        </p>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
