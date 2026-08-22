@@ -5,7 +5,7 @@ export default function Hero() {
       <div className="flex justify-center items-center w-1/2">
         <div className="w-64">
           <h1 className="font-bold text-5xl">Hero</h1>
-          <p className="">More info on more info. Cool stuff only gang</p>
+          <p className="">More info on more info. Get your feedback.</p>
         </div>
       </div>
 
