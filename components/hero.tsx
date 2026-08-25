@@ -1,6 +1,12 @@
+"use client";
+
 import Image from "next/image";
+import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+  const router = useRouter();
+
   return (
     <div className="min-h-screen w-full bg-white flex flex-row m-4">
       {/* Info */}
@@ -12,6 +18,12 @@ export default function Hero() {
             More info on more info. Get your feedback. there should be more
             feedback info here. It should get even longer for crazier reasons.
           </p>
+          <Button
+            className="w-1/2 mt-4 rounded-2xl text-lg h-10"
+            onClick={() => router.push("/sign-up")}
+          >
+            Try Now
+          </Button>
         </div>
       </div>
 
@@ -22,6 +34,7 @@ export default function Hero() {
           width={500}
           height={500}
           alt="Feedback image"
+          className="w-auto h-auto"
         />
       </div>
     </div>
