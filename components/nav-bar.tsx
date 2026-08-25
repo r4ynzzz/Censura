@@ -67,77 +67,79 @@ export default function NavBar() {
   const router = useRouter();
 
   return (
-    <nav className="bg-white flex items-center justify-between py-4 px-6 lg:px-14 text-black drop-shadow-md sticky top-0 z-1">
-      <h1 className="font-bold">Censura</h1>
-      <span>
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Features</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-96 gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  {features.map((feature) => (
-                    <li key={feature.title}>
-                      <Link
-                        href={feature.href}
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">
-                          {feature.title}
-                        </div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          {feature.description}
-                        </p>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem className="hidden md:flex">
-              <NavigationMenuTrigger>Company</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-96 gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  {components.map((component) => (
-                    <li key={component.title}>
-                      <Link
-                        href={component.href}
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">
-                          {component.title}
-                        </div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          {component.description}
-                        </p>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Content</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <NavigationMenuLink>link</NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink>Pricing</NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-      </span>
-      <span className="">
-        <Button
-          variant="outline"
-          className="mx-2"
-          onClick={() => router.push("/sign-in")}
-        >
-          Login
-        </Button>
-        <Button onClick={() => router.push("/sign-up")}>Apply Now</Button>
-      </span>
+    <nav className="bg-blue-900 text-white drop-shadow-md sticky top-0 z-1">
+      <div className="flex w-full items-center justify-between py-4 px-6 lg:px-14">
+        <h1 className="font-bold">Censura</h1>
+        <span>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Features</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-96 gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {features.map((feature) => (
+                      <li key={feature.title}>
+                        <Link
+                          href={feature.href}
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">
+                            {feature.title}
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            {feature.description}
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="hidden md:flex">
+                <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-96 gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {components.map((component) => (
+                      <li key={component.title}>
+                        <Link
+                          href={component.href}
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">
+                            {component.title}
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            {component.description}
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Content</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <NavigationMenuLink>link</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink>Pricing</NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </span>
+        <span className="">
+          <Button
+            variant="outline"
+            className="mx-2 text-primary"
+            onClick={() => router.push("/sign-in")}
+          >
+            Login
+          </Button>
+          <Button onClick={() => router.push("/sign-up")}>Apply Now</Button>
+        </span>
+      </div>
     </nav>
   );
 }
