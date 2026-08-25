@@ -8,7 +8,7 @@ export default function Hero() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen w-full bg-radial-[at_1%_50%] from-sky-400 via-sky-700 to-blue-900 to-80% flex flex-row">
+    <div className="min-h-screen w-full bg-radial-[at_20%_50%] from-sky-400 via-sky-700 to-blue-900 to-60% flex flex-row">
       {/* Info */}
       <div className="flex justify-center items-center w-1/2 text-white">
         <div className="w-13/15">
@@ -19,7 +19,7 @@ export default function Hero() {
             feedback info here. It should get even longer for crazier reasons.
           </p>
           <Button
-            className="w-1/2 mt-4 rounded-2xl text-lg h-10"
+            className="bg-gray-400 w-1/2 mt-4 rounded-lg text-lg h-10 text-white hover:bg-gray-500 shadow hover:shadow-xl transition-all duration-300"
             onClick={() => router.push("/sign-up")}
           >
             Try Now
