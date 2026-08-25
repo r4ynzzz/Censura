@@ -8,9 +8,9 @@ export default function Hero() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen w-full bg-white flex flex-row m-4">
+    <div className="min-h-screen w-full bg-radial-[at_1%_50%] from-sky-400 via-sky-700 to-blue-900 to-80% flex flex-row">
       {/* Info */}
-      <div className="flex justify-center items-center w-1/2">
+      <div className="flex justify-center items-center w-1/2 text-white">
         <div className="w-13/15">
           <h1 className="font-bold text-4xl pb-4">Empowering Businesses</h1>
           <h1 className="font-bold text-4xl pb-4">With Effortless Feedback.</h1>
