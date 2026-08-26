@@ -68,7 +68,7 @@ export default function NavBar() {
 
   return (
     <nav className="flex bg-blue-900/99 text-white drop-shadow-md justify-center items-center sticky top-0 z-1">
-      <div className="bg-blue-950/60 flex items-center justify-between rounded-4xl py-4 px-6 lg:px-14 w-5/6 m-2">
+      <div className="bg-blue-950/60 flex items-center justify-between rounded-full border border-sky-800 py-4 px-6 lg:px-14 w-5/6 m-2">
         <h1 className="font-bold">Censura</h1>
         <span>
           <NavigationMenu>
