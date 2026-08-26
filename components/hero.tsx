@@ -19,7 +19,7 @@ export default function Hero() {
             feedback info here. It should get even longer for crazier reasons.
           </p>
           <Button
-            className="bg-gray-400 w-1/2 mt-4 rounded-lg text-lg h-10 text-white hover:bg-gray-500 shadow hover:shadow-xl transition-all duration-300"
+            className="bg-white w-1/2 mt-4 rounded-lg text-lg h-10 text-black hover:bg-gray-400 hover:text-white shadow hover:shadow-xl transition-all duration-300"
             onClick={() => router.push("/sign-up")}
           >
             Try Now

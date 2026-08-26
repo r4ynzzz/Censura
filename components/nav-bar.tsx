@@ -71,7 +71,7 @@ export default function NavBar() {
       <div className="bg-blue-950/60 flex items-center justify-between rounded-4xl py-4 px-6 lg:px-14 w-3/4 m-2">
         <h1 className="font-bold">Censura</h1>
         <span>
-          <NavigationMenu>
+          <NavigationMenu className="hover:rounded-2xl">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Features</NavigationMenuTrigger>
