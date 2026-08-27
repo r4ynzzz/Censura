@@ -129,7 +129,7 @@ export default function NavBar() {
             </NavigationMenuList>
           </NavigationMenu>
         </span>
-        <span className="">
+        <span>
           <Button
             variant="outline"
             className="mx-2 text-primary"
