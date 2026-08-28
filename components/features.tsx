@@ -25,9 +25,12 @@ export default function Features() {
       </div>
       <div className="flex items-center justify-between w-3/4">
         <Card className="w-80 h-80 rounded-2xl">
-          <CardHeader>
-            <CardTitle>Feature 1</CardTitle>
-            <CardDescription>Describe feature 1</CardDescription>
+          <CardHeader className="h-36">
+            <CardTitle>Custom Forms</CardTitle>
+            <CardDescription>
+              Create forms with questions regarding anything. Forms come in many
+              different structures.
+            </CardDescription>
             <CardAction>Action</CardAction>
           </CardHeader>
           <CardContent>
@@ -38,9 +41,12 @@ export default function Features() {
           </CardFooter>
         </Card>
         <Card className="w-80 h-80 rounded-2xl">
-          <CardHeader>
-            <CardTitle>Feature 1</CardTitle>
-            <CardDescription>Describe feature 1</CardDescription>
+          <CardHeader className="h-36">
+            <CardTitle>Form Analytics</CardTitle>
+            <CardDescription>
+              Results from forms are analyzed. Prominent data is displayed to be
+              used.
+            </CardDescription>
             <CardAction>Action</CardAction>
           </CardHeader>
           <CardContent>
@@ -51,9 +57,12 @@ export default function Features() {
           </CardFooter>
         </Card>
         <Card className="w-80 h-80 rounded-2xl">
-          <CardHeader>
-            <CardTitle>Feature 1</CardTitle>
-            <CardDescription>Describe feature 1</CardDescription>
+          <CardHeader className="h-36">
+            <CardTitle>Fleetwood Mac</CardTitle>
+            <CardDescription>
+              Only the best band to ever exist. Cannot be topped by anyone. Go
+              ahead, try.
+            </CardDescription>
             <CardAction>Action</CardAction>
           </CardHeader>
           <CardContent>
