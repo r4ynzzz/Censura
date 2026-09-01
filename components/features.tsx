@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+import Image from "next/image";
 
 export default function Features() {
   return (
@@ -57,19 +58,25 @@ export default function Features() {
           </CardFooter>
         </Card>
         <Card className="w-80 h-80 rounded-2xl">
-          <CardHeader className="h-36">
+          <CardHeader className="h-10">
             <CardTitle>Fleetwood Mac</CardTitle>
+            <CardAction>Action</CardAction>
+          </CardHeader>
+          <CardContent className="h-36">
+            <Image
+              src="/public/FTWDMAC.jpg"
+              width={500}
+              height={500}
+              alt="Fleetwood Mac"
+              className="w-auto h-auto rounded"
+            />
+          </CardContent>
+          <CardFooter className="flex-col items-start">
+            <p>Footer</p>
             <CardDescription>
               Only the best band to ever exist. Cannot be topped by anyone. Go
               ahead, try.
             </CardDescription>
-            <CardAction>Action</CardAction>
-          </CardHeader>
-          <CardContent>
-            <p>Content</p>
-          </CardContent>
-          <CardFooter>
-            <p>Footer</p>
           </CardFooter>
         </Card>
       </div>
