@@ -57,18 +57,18 @@ export default function Features() {
             <p>Footer</p>
           </CardFooter>
         </Card>
-        <Card className="w-80 h-80 rounded-2xl">
+        <Card className="w-80 h-96 rounded-2xl">
           <CardHeader className="h-10">
             <CardTitle>Fleetwood Mac</CardTitle>
             <CardAction>Action</CardAction>
           </CardHeader>
-          <CardContent className="h-36">
+          <CardContent className="flex items-center justify-center">
             <Image
-              src="/public/FTWDMAC.jpg"
-              width={500}
-              height={500}
+              src="/FTWDMAC.jpg"
+              width={250}
+              height={250}
               alt="Fleetwood Mac"
-              className="w-auto h-auto rounded"
+              className="rounded"
             />
           </CardContent>
           <CardFooter className="flex-col items-start">
